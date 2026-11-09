@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vương Thị Anh | Bài tập Phát triển ứng dụng WEB/TMĐT</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f3f6f9;
+            line-height: 1.6;
+        }
+        .container {
+            width: 900px;
+            max-width: 92%;
+            margin: 40px auto;
+        }
+        .profile, .assignments {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 5px 20px rgba(25, 50, 70, .08);
+            margin-bottom: 22px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e4edf4;
+        }
+        h1 { margin: 0 0 8px; color: #075985; }
+        .muted { color: #64748b; margin: 4px 0; }
+        .social a {
+            display: inline-block;
+            margin: 8px 12px 0 0;
+            color: #087eaf;
+            text-decoration: none;
+        }
+        .social a:hover { text-decoration: underline; }
+        h2 { color: #075985; margin-top: 0; }
+        .assignment-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .assignment-list a {
+            display: block;
+            padding: 15px 17px;
+            border: 1px solid #dce7ef;
+            border-radius: 10px;
+            color: #263238;
+            text-decoration: none;
+            background: #fbfdff;
+        }
+        .assignment-list a:hover {
+            border-color: #0ea5e9;
+            background: #f0f9ff;
+        }
+        .assignment-list strong { color: #0369a1; }
+        .note {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 18px;
+        }
+        @media (max-width: 600px) {
+            .profile { flex-direction: column; text-align: center; }
+            .assignment-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <section class="profile">
+            <img class="avatar" src="assets/avt.jpg" alt>
+            <div>
+                <h1>Vương Thị Anh</h1>
+                <p class="muted">Sinh viên ngành Thương mại điện tử – UEH</p>
+                <p class="muted">Bài tập học phần Phát triển ứng dụng WEB/TMĐT</p>
+                <div class="social">
+                    <!-- Thay # bằng đường dẫn mạng xã hội thật của bạn -->
+                    <a href="https://www.facebook.com/vwnganh/" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/vwnganh/" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="assignments">
+            <h2>Danh sách bài tập</h2>
+            <div class="assignment-list">
+                <a href="BaiTap2.html"><strong>Bài tập 2</strong><br>Định dạng văn bản và CSS cơ bản</a>
+                <a href="BaiTap4.html"><strong>Bài tập 4</strong><br>Menu hiển thị inline-block</a>
+                <a href="BaiTap5.html"><strong>Bài tập 5 + 9</strong><br>Best Shared Hosting Company</a>
+                <a href="BaiTap6.html"><strong>Bài tập 6</strong><br>My Portfolio</a>
+                <a href="BaiTap7.html"><strong>Bài tập 7</strong><br>Layout website</a>
+                <a href="BaiTap8.html"><strong>Bài tập 8b</strong><br>The Bat Family – CSS2</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
