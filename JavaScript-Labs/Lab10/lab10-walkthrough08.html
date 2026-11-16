@@ -6,20 +6,29 @@
 <link rel="stylesheet" href="css/effects.css">
 <style>
 #box {
-position: relative;
-width: 100px;
-height: 100px;
-background-color: #337ab7;
-margin-top: 20px;
+position: relative !important;
 }
 </style>
 <script src="js/jquery-3.1.1.min.js"></script>
 </head>
 <body>
 <main>
-<div id="commandLine"><button>Animate</button></div>
+<div id="commandLine"><button id="btnAnimate">Animate</button></div>
 <div id="box"></div>
 </main>
-<script src="js/lab10-walkthrough08.js"></script>
+<script>
+$(function() {
+$("#btnAnimate").click(function() {
+$("#box")
+.animate({
+left: '495px',
+opacity: '1',
+height: '50px'
+})
+.animate({top: '400px', opacity: '0.2'})
+.animate({height: '200px'}, 2000);
+});
+});
+</script>
 </body>
 </html>
