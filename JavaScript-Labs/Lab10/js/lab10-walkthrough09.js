@@ -7,6 +7,23 @@ $.each(data, function(index, value) {
 var li = $('<li/>').html(value.name);
 li.appendTo("div#results ul");
 });
+}).fail(function() {
+var fallbackData = [
+{name: "Amsterdam"},
+{name: "Athens"},
+{name: "Berlin"},
+{name: "Calgary"},
+{name: "Florence"},
+{name: "London"},
+{name: "New York"},
+{name: "Paris"},
+{name: "Rome"},
+{name: "Toronto"}
+];
+$.each(fallbackData, function(index, value) {
+var li = $('<li/>').html(value.name);
+li.appendTo("div#results ul");
+});
 });
 });
 });
