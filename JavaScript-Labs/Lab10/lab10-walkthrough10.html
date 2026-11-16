@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>      
-    <title>Lab 10</title>    
-    <link rel="stylesheet" href="css/consume.css">
-        
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>    
-    <script type="text/javascript" language="javascript" src="js/lab10-walkthrough10.js"></script>      
-    
+<meta charset="utf-8"/>
+<title>Lab 10</title>
+<script src="js/jquery-3.1.1.min.js"></script>
 </head>
-<body >
-
-<button id="consume">Consume</button> 
-<div id="results">
-    <ul></ul>
-</div>
-<div class="animLoading"><img src="images/ajax-loader.gif" /></div>  
-       
+<body>
+<button id="consume">Consume</button>
+<div class="animLoading">Loading...</div>
+<div id="results"><ul></ul></div>
+<script>
+$(function() {
+$('.animLoading').hide();
+$("#consume").click(function() {
+$('.animLoading').show();
+var jsonText = JSON.stringify([
+{name: "Amsterdam"},
+{name: "Athens"},
+{name: "Berlin"},
+{name: "Calgary"},
+{name: "Florence"},
+{name: "London"},
+{name: "New York"},
+{name: "Paris"},
+{name: "Rome"},
+{name: "Toronto"}
+]);
+var blob = new Blob([jsonText], {type: "application/json"});
+var url = URL.createObjectURL(blob);
+$("div#results ul").empty();
+$.get(url, null, null, "json")
+.done(function(data) {
+$.each(data, function(index, value) {
+var li = $('<li/>').html(value.name);
+li.appendTo("div#results ul");
+});
+})
+.fail(function(xhr, status, error) {
+alert("failed loading data status=" + status + " error=" + error);
+})
+.always(function(data) {
+$('.animLoading').fadeOut("slow");
+});
+});
+});
+</script>
 </body>
-  
-    
 </html>
