@@ -1,10 +1,171 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript Labs</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tổng hợp Thực hành JavaScript - Vương Thị Anh</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Segoe UI', Arial, sans-serif;
+background-color: #f4f6f9;
+color: #2c3e50;
+line-height: 1.6;
+padding: 40px 20px;
+}
+.container {
+max-width: 850px;
+margin: 0 auto;
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+overflow: hidden;
+}
+.header {
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+color: #ffffff;
+padding: 35px 30px;
+display: flex;
+align-items: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+.avatar {
+width: 115px;
+height: 115px;
+border-radius: 50%;
+object-fit: cover;
+border: 4px solid rgba(255, 255, 255, 0.85);
+background-color: #dce4ec;
+}
+.student-info h1 {
+font-size: 24px;
+margin-bottom: 8px;
+}
+.student-info p {
+font-size: 15px;
+margin-bottom: 4px;
+opacity: 0.95;
+}
+.github-btn {
+display: inline-block;
+margin-top: 10px;
+padding: 7px 14px;
+background-color: #ffffff;
+color: #1e3c72;
+text-decoration: none;
+font-weight: bold;
+font-size: 14px;
+border-radius: 6px;
+transition: 0.2s;
+}
+.github-btn:hover {
+background-color: #e2e8f0;
+}
+.section {
+padding: 28px 30px;
+border-bottom: 1px solid #edf2f7;
+}
+.section:last-child {
+border-bottom: none;
+}
+.section h2 {
+font-size: 19px;
+color: #1e3c72;
+margin-bottom: 12px;
+border-left: 4px solid #2a5298;
+padding-left: 10px;
+}
+.intro-text {
+color: #4a5568;
+text-align: justify;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 12px;
+}
+th, td {
+padding: 13px 15px;
+text-align: left;
+border-bottom: 1px solid #e2e8f0;
+}
+th {
+background-color: #f8fafc;
+color: #1e3c72;
+font-weight: 600;
+}
+tr:hover {
+background-color: #f8fafc;
+}
+.lab-link {
+display: inline-block;
+padding: 7px 14px;
+background-color: #2a5298;
+color: #ffffff;
+text-decoration: none;
+border-radius: 5px;
+font-size: 14px;
+font-weight: 600;
+transition: 0.2s;
+}
+.lab-link:hover {
+background-color: #1e3c72;
+}
+</style>
 </head>
 <body>
-    <h1>JavaScript Labs - Vương Thị Anh</h1>
+<div class="container">
+<div class="header">
+<img src="avatar.jpg" alt="Ảnh đại diện Vương Thị Anh" class="avatar" onerror="this.src='https://avatars.githubusercontent.com/vwnganh'">
+<div class="student-info">
+<h1>Vương Thị Anh</h1>
+<p><strong>Mã số sinh viên:</strong> 31241025843 </p>
+<p><strong>Lớp học phần:</strong> 26C1INF50902702 </p>
+<a href="https://github.com/vwnganh" target="_blank" class="github-btn">GitHub cá nhân: github.com/vwnganh</a>
+</div>
+</div>
+
+<div class="section">
+<h2>Giới thiệu về bài thực hành</h2>
+<p class="intro-text">
+Chuỗi 03 bài thực hành (Lab 08, Lab 09 và Lab 10) được thực hiện nhằm nắm vững kiến thức nền tảng và kỹ thuật lập trình phía máy khách (client-side) với JavaScript. Trong phát triển ứng dụng web hiện đại, JavaScript đóng vai trò cốt lõi trong việc biến các trang HTML/CSS tĩnh trở nên sống động thông qua khả năng thao tác cây cấu trúc DOM, xử lý sự kiện tương tác người dùng, tạo hiệu ứng chuyển động mượt mà và kết nối dữ liệu bất đồng bộ (AJAX/JSON) với các dịch vụ web mà không cần tải lại trang.
+</p>
+</div>
+
+<div class="section">
+<h2>Danh sách bài thực hành</h2>
+<table>
+<thead>
+<tr>
+<th>Bài Lab</th>
+<th>Nội dung thực hành</th>
+<th>Truy cập</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lab 08</strong></td>
+<td>JavaScript 1: Language Foundations</td>
+<td><a href="Lab08/index.html" class="lab-link">Xem bài Lab 08</a></td>
+</tr>
+<tr>
+<td><strong>Lab 09</strong></td>
+<td>JavaScript 2: DOM and Events</td>
+<td><a href="Lab09/index.html" class="lab-link">Xem bài Lab 09</a></td>
+</tr>
+<tr>
+<td><strong>Lab 10</strong></td>
+<td>JavaScript 3: jQuery</td>
+<td><a href="Lab10/index.html" class="lab-link">Xem bài Lab 10</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </body>
 </html>
